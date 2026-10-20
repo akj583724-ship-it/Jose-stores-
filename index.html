@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#176b45">
+<title>JOSE STORE — Fresh groceries, every day</title>
+<style>
+:root{--green:#176b45;--deep:#104b32;--lime:#d9f36a;--cream:#f7f8f1;--ink:#18231c;--muted:#657168;--line:#e3e9df;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}.topbar{background:var(--deep);color:#fff;text-align:center;padding:9px 14px;font-size:12px;letter-spacing:.08em}.topbar strong{color:var(--lime)}header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}.nav{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:950;font-size:21px;letter-spacing:-.06em;white-space:nowrap}.logo{display:grid;place-items:center;width:38px;height:38px;background:var(--lime);border-radius:12px;font-size:22px}.brand span small{display:block;font-size:9px;letter-spacing:.18em;color:var(--green);margin-top:1px}.search{flex:1;display:flex;align-items:center;gap:9px;background:#f4f6f0;border:1px solid var(--line);padding:0 14px;border-radius:12px;min-width:100px}.search input{border:0;background:transparent;outline:0;padding:13px 0;width:100%;min-width:0}.cartbtn,.primary,.secondary{border:0;border-radius:12px;font-weight:800}.cartbtn{background:var(--green);color:#fff;padding:12px 16px;white-space:nowrap}.cartbtn span{background:var(--lime);color:var(--deep);padding:3px 7px;border-radius:8px;margin-left:5px}.hero{max-width:1180px;margin:24px auto 0;padding:0 22px}.hero-inner{background:var(--green);color:#fff;overflow:hidden;border-radius:28px;min-height:370px;display:grid;grid-template-columns:1.1fr .9fr;position:relative}.hero-copy{padding:52px 48px;align-self:center;z-index:1}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--lime)}h1{font-size:clamp(38px,5vw,64px);line-height:.99;letter-spacing:-.065em;margin:16px 0}.hero p{max-width:420px;line-height:1.65;color:#e0eee5;font-size:15px}.primary{background:var(--lime);color:var(--deep);padding:14px 20px;margin-top:12px}.hero-art{display:grid;place-items:center;position:relative;background:radial-gradient(circle at 55% 42%,#3a9766 0,#176b45 58%,#145738 100%);min-height:280px}.produce{font-size:clamp(110px,17vw,190px);filter:drop-shadow(0 20px 15px #0c3b2870);transform:rotate(-8deg)}.orbit{position:absolute;width:270px;height:270px;border:1px solid #ffffff35;border-radius:50%}.orbit:after{content:"";position:absolute;inset:28px;border:1px dashed #ffffff3b;border-radius:50%}.floating{position:absolute;background:#fff;color:var(--deep);border-radius:14px;padding:12px 16px;font-size:12px;font-weight:850;box-shadow:0 10px 30px #0a392533}.float1{top:48px;right:22px}.float2{bottom:42px;left:12px}.benefits{max-width:1180px;margin:18px auto;padding:0 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.benefit{display:flex;align-items:center;gap:12px;padding:17px;background:#fff;border:1px solid var(--line);border-radius:16px}.benefit i{font-style:normal;font-size:24px}.benefit strong{display:block;font-size:13px}.benefit small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.section{max-width:1180px;margin:50px auto;padding:0 22px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:20px}.section-head h2{font-size:30px;letter-spacing:-.05em;margin:5px 0}.section-head p{color:var(--muted);margin:0;font-size:13px}.kicker{font-size:10px;letter-spacing:.18em;color:var(--green);font-weight:900;text-transform:uppercase}.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.cat{border:1px solid var(--line);background:#fff;border-radius:18px;padding:18px 10px;text-align:center;color:var(--ink);transition:.2s}.cat:hover,.cat.active{border-color:var(--green);background:#eff8e8;transform:translateY(-2px)}.cat .emoji{font-size:35px;display:block;margin-bottom:10px}.cat strong{font-size:12px}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.product{background:#fff;border:1px solid var(--line);border-radius:19px;overflow:hidden;display:flex;flex-direction:column}.product-visual{height:150px;display:grid;place-items:center;background:linear-gradient(145deg,#eff7e6,#e0efce);font-size:68px;position:relative}.product-visual .tag{position:absolute;left:12px;top:12px;background:#fff;border-radius:7px;padding:5px 8px;font-size:9px;letter-spacing:.08em;font-weight:900;color:var(--green)}.product-info{padding:15px;display:flex;flex-direction:column;flex:1}.product-info .type{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.product-info h3{font-size:15px;margin:7px 0 4px}.product-info .unit{font-size:11px;color:var(--muted)}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:15px}.price{font-size:17px;font-weight:900}.add{border:0;background:var(--lime);color:var(--deep);font-weight:900;border-radius:10px;padding:9px 12px}.add:hover{background:#c9e65a}.empty{grid-column:1/-1;background:#fff;border:1px dashed var(--line);border-radius:15px;padding:30px;text-align:center;color:var(--muted)}.promo{max-width:1136px;margin:48px auto;padding:30px 36px;background:#e8f3d8;border-radius:24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.promo h2{margin:5px 0;font-size:26px;letter-spacing:-.04em}.promo p{margin:0;color:#53634f;font-size:13px}.secondary{background:var(--green);color:white;padding:13px 17px;white-space:nowrap}footer{margin-top:55px;background:#102f22;color:#fff;padding:34px 22px}.footer-inner{max-width:1136px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-inner p{font-size:12px;color:#bed0c4;margin:6px 0 0}.foot-brand{color:#fff}.foot-note{font-size:11px;color:#bed0c4;text-align:right}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,150%);background:#102f22;color:#fff;padding:13px 18px;border-radius:12px;box-shadow:0 8px 30px #0002;z-index:20;transition:.25s;font-size:13px}.toast.show{transform:translate(-50%,0)}.cart-panel{position:fixed;right:18px;bottom:76px;width:min(360px,calc(100vw - 36px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 60px #102f2230;z-index:15;padding:18px;display:none}.cart-panel.open{display:block}.cart-panel h3{margin:0 0 12px}.cart-items{max-height:220px;overflow:auto}.cart-row{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.cart-total{display:flex;justify-content:space-between;font-weight:900;margin:14px 0}.cart-help{font-size:11px;color:var(--muted);line-height:1.5}.cart-actions{display:flex;gap:8px}.cart-actions button{flex:1}.clearbtn{background:#f0f3ec;border:0;border-radius:10px;padding:12px;font-weight:800}
+@media(max-width:800px){.nav{gap:10px;padding:12px 15px;flex-wrap:wrap}.brand{font-size:18px}.search{order:3;flex-basis:100%}.hero{padding:0 14px}.hero-inner{grid-template-columns:1fr}.hero-copy{padding:34px 26px 10px}.hero-art{min-height:210px}.produce{font-size:130px}.orbit{width:200px;height:200px}.float1{top:20px;right:16px}.float2{bottom:20px;left:16px}.benefits{padding:0 14px;grid-template-columns:1fr}.benefit{padding:13px}.section{padding:0 14px;margin:38px auto}.categories{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-visual{height:125px;font-size:56px}.product-info{padding:12px}.product-info h3{font-size:13px}.price{font-size:15px}.add{padding:8px 10px}.promo{margin:35px 14px;padding:24px;align-items:flex-start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column}.foot-note{text-align:left}}@media(max-width:360px){.cartbtn{padding:10px}.brand{font-size:16px}.categories{gap:7px}.cat{padding:13px 6px}.product-bottom{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="topbar">FRESH PICKS. EVERYDAY VALUE. <strong>WELCOME TO JOSE STORE</strong></div>
+<header><nav class="nav">
+<a class="brand" href="#" aria-label="Jose Store home"><span class="logo">🥬</span><span>JOSE STORE<small>FRESH • LOCAL • EVERYDAY</small></span></a>
+<label class="search" aria-label="Search products">🔎 <input id="search" type="search" placeholder="Search fruits, vegetables, essentials…"></label>
+<button class="cartbtn" id="cartToggle">🛒 Cart <span id="cartCount">0</span></button>
+</nav></header>
+<main>
+<section class="hero"><div class="hero-inner">
+<div class="hero-copy"><div class="eyebrow">Your neighbourhood grocery shop</div><h1>Good food.<br>Good mood.</h1><p>Fresh fruits, crisp vegetables and everyday essentials — all in one happy place. Shop your daily favourites at JOSE STORE.</p><button class="primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Explore groceries ↘</button></div>
+<div class="hero-art"><div class="orbit"></div><div class="produce">🥑</div><div class="floating float1">🌱 Fresh every day</div><div class="floating float2">🧺 Your daily essentials</div></div>
+</div></section>
+<section class="benefits">
+<div class="benefit"><i>🥦</i><div><strong>Fresh favourites</strong><small>Everyday produce and pantry picks</small></div></div>
+<div class="benefit"><i>💚</i><div><strong>Friendly local service</strong><small>Your neighbourhood store</small></div></div>
+<div class="benefit"><i>🛍️</i><div><strong>Easy to browse</strong><small>Find your daily essentials quickly</small></div></div>
+</section>
+<section class="section"><div class="section-head"><div><div class="kicker">Browse by aisle</div><h2>Shop categories</h2><p>Pick a category to find what you need.</p></div></div>
+<div class="categories" id="categories">
+<button class="cat active" data-category="All"><span class="emoji">🛒</span><strong>All items</strong></button>
+<button class="cat" data-category="Fruits"><span class="emoji">🍎</span><strong>Fruits</strong></button>
+<button class="cat" data-category="Vegetables"><span class="emoji">🥦</span><strong>Vegetables</strong></button>
+<button class="cat" data-category="Dairy"><span class="emoji">🥛</span><strong>Dairy</strong></button>
+<button class="cat" data-category="Pantry"><span class="emoji">🍚</span><strong>Pantry</strong></button>
+<button class="cat" data-category="Snacks"><span class="emoji">🍪</span><strong>Snacks</strong></button>
+</div></section>
+<section class="section" id="shop"><div class="section-head"><div><div class="kicker">Picked for your kitchen</div><h2>Everyday essentials</h2><p>Sample items and prices — edit these to match your shop.</p></div></div><div class="products" id="products"></div></section>
+<section class="promo"><div><div class="kicker">Made for everyday shopping</div><h2>Your basket, your way.</h2><p>Add products to your cart and review your grocery list anytime.</p></div><button class="secondary" onclick="toggleCart(true)">View my basket →</button></section>
+</main>
+<footer><div class="footer-inner"><div><a class="brand foot-brand" href="#"><span class="logo">🥬</span><span>JOSE STORE<small>FRESH • LOCAL • EVERYDAY</small></span></a><p>Fresh groceries and daily essentials for your home.</p></div><div class="foot-note">Update this website with your shop address, opening hours<br>and contact number before publishing.</div></div></footer>
+<div class="cart-panel" id="cartPanel"><h3>Your grocery basket</h3><div class="cart-items" id="cartItems"></div><div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div><p class="cart-help">This is a demo cart. Confirm real prices, availability and ordering details with JOSE STORE.</p><div class="cart-actions"><button class="clearbtn" onclick="clearCart()">Clear cart</button><button class="secondary" onclick="showToast('Add your store WhatsApp number to enable orders.')">Order info</button></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const products=[
+ {id:1,name:"Fresh Bananas",category:"Fruits",unit:"per dozen",price:60,emoji:"🍌",tag:"DAILY PICK"},
+ {id:2,name:"Red Apples",category:"Fruits",unit:"per 500 g",price:120,emoji:"🍎",tag:"FRESH"},
+ {id:3,name:"Sweet Oranges",category:"Fruits",unit:"per kg",price:90,emoji:"🍊"},
+ {id:4,name:"Fresh Tomatoes",category:"Vegetables",unit:"per kg",price:40,emoji:"🍅",tag:"POPULAR"},
+ {id:5,name:"Green Broccoli",category:"Vegetables",unit:"each",price:55,emoji:"🥦"},
+ {id:6,name:"Farm Potatoes",category:"Vegetables",unit:"per kg",price:35,emoji:"🥔"},
+ {id:7,name:"Fresh Milk",category:"Dairy",unit:"500 ml",price:32,emoji:"🥛",tag:"DAILY PICK"},
+ {id:8,name:"Butter",category:"Dairy",unit:"100 g",price:58,emoji:"🧈"},
+ {id:9,name:"Rice",category:"Pantry",unit:"per kg",price:65,emoji:"🍚",tag:"ESSENTIAL"},
+ {id:10,name:"Wheat Flour",category:"Pantry",unit:"per kg",price:48,emoji:"🌾"},
+ {id:11,name:"Cooking Oil",category:"Pantry",unit:"1 litre",price:145,emoji:"🫒"},
+ {id:12,name:"Cookies",category:"Snacks",unit:"pack",price:30,emoji:"🍪"}
+];
+let category="All",cart={};
+const money=n=>"₹"+n.toLocaleString("en-IN");
+function renderProducts(){
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const list=products.filter(p=>(category==="All"||p.category===category)&&(`${p.name} ${p.category}`.toLowerCase().includes(q)));
+ const root=document.getElementById("products");
+ if(!list.length){root.innerHTML='<div class="empty">No products found. Try another search.</div>';return}
+ root.innerHTML=list.map(p=>`<article class="product"><div class="product-visual"><span>${p.emoji}</span>${p.tag?`<span class="tag">${p.tag}</span>`:""}</div><div class="product-info"><div class="type">${p.category}</div><h3>${p.name}</h3><div class="unit">${p.unit}</div><div class="product-bottom"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">+ Add</button></div></div></article>`).join("");
+}
+function addToCart(id){cart[id]=(cart[id]||0)+1;renderCart();showToast(products.find(p=>p.id===id).name+" added to basket")}
+function renderCart(){
+ const count=Object.values(cart).reduce((a,b)=>a+b,0);
+ document.getElementById("cartCount").textContent=count;
+ const items=products.filter(p=>cart[p.id]);
+ document.getElementById("cartItems").innerHTML=items.length?items.map(p=>`<div class="cart-row"><span>${p.emoji} ${p.name} × ${cart[p.id]}</span><strong>${money(p.price*cart[p.id])}</strong></div>`).join(""):'<p class="cart-help">Your basket is empty. Add a few grocery favourites!</p>';
+ document.getElementById("cartTotal").textContent=money(items.reduce((sum,p)=>sum+p.price*cart[p.id],0));
+}
+function toggleCart(force){document.getElementById("cartPanel").classList.toggle("open",force===true?true:force===false?false:!document.getElementById("cartPanel").classList.contains("open"))}
+function clearCart(){cart={};renderCart();showToast("Basket cleared")}
+let toastTimer;
+function showToast(message){const t=document.getElementById("toast");t.textContent=message;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2500)}
+document.getElementById("search").addEventListener("input",renderProducts);
+document.getElementById("cartToggle").addEventListener("click",()=>toggleCart());
+document.querySelectorAll(".cat").forEach(btn=>btn.addEventListener("click",()=>{category=btn.dataset.category;document.querySelectorAll(".cat").forEach(b=>b.classList.toggle("active",b===btn));renderProducts()}));
+renderProducts();renderCart();
+</script>
+</body>
+</html>
